@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Set Data
+        </title>
+        <script src="jquery-4.0.0.min.js"></script>
+        <script>
+            function getData(){
+                var content =$("input")
+                if(content.length>0){
+                    for(var i=0;i<content.length;i++){
+                        if(content[i].checked){
+                            alert(content[i].value)
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    Courses:
+                </td>
+                <td>
+                    <input type="checkbox" name="courses" value="C"/>C
+                    <input type="checkbox" name="courses" value="C++"/>C++
+                    <input type="checkbox" name="courses" value="JAVA"/>JAVA
+                    <input type="checkbox" name="courses" value="PYTHON"/>PYTHON
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <input type="button" value="Submit" onclick="getData()"/>
+                </td>
+            </tr>
+        </table>
+        <div id="divResult"></div>
+        <p id="pResult"></p>
+    </body>
+</html>

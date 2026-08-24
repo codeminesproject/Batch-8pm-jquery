@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login
+        </title>
+        <script src="jquery-4.0.0.min.js"></script>
+        <script>
+            function getData(){
+                var username = $("#txtUsername").val()
+                var password = $("#txtPassword").val()
+                alert("User name: "+username+" and password: "+password)
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    Username:
+                </td>
+                <td>
+                    <input type="text" id="txtUsername"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="text" id="txtPassword"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <input type="button" value="Submit" onclick="getData()"/>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

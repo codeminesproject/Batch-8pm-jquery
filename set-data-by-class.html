@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Set Data
+        </title>
+        <script src="jquery-4.0.0.min.js"></script>
+        <script>
+            function setData(){
+                var content =$(".login")
+                if(content.length>0){
+                    for(var i=0;i<content.length;i++){
+                        alert("value at "+i+" position: "+content[i].value)
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    Username:
+                </td>
+                <td>
+                    <input type="text" id="txtUsername" class="login"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="text" id="txtPassword" class="login"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                </td>
+                <td>
+                    <input type="button" value="Submit" onclick="setData()"/>
+                </td>
+            </tr>
+        </table>
+        <div id="divResult"></div>
+        <p id="pResult"></p>
+    </body>
+</html>
