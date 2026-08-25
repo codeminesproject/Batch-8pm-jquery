@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Events
+        </title>
+        <script src="../jquery-4.0.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#txtName").blur(function(event){
+                    alert(event.target.value)
+                })
+
+                
+            })
+
+            
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    <input type="text" id="txtName"/>
+                    <label id="lblErrorName"></label>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

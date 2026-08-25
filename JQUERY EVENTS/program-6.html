@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Events
+    </title>
+    <script src="../jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#txtNumber").keyup(function (event) {
+                //alert(event.key)
+                //alert(event.keyCode)
+                event.target.value = event.target.value.replace(/[^0-9]/g, '');
+            })
+
+            $("#txtName").keyup(function (event) {
+                //alert(event.key)
+                //alert(event.keyCode)
+                event.target.value = event.target.value.replace(/[^a-zA-Z]/g, '');
+            })
+        })
+
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                Number
+            </td>
+            <td>
+                <input type="text" id="txtNumber" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                <input type="text" id="txtName" />
+            </td>
+        </tr>
+    </table>
+    <div id="divResult">
+
+    </div>
+</body>
+
+</html>

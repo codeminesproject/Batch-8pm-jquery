@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Events
+    </title>
+    <script src="../jquery-4.0.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#txtName").keyup(function (event) {
+                $("#divResult").html(event.target.value);
+            })
+
+
+        })
+
+
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+                <input type="text" id="txtName" />
+                <label id="lblErrorName"></label>
+            </td>
+        </tr>
+    </table>
+    <div id="divResult">
+
+    </div>
+</body>
+
+</html>
