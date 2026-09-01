@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>DOM Manupulation</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .h2 {
+            font-size: 50px;
+            color: white;
+            background-color: blue;
+        }
+
+        .content-p {
+            color: red;
+            font-size: 30px;
+        }
+
+        .content-bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content" class="content-p sample-p">
+        Welcome to CodeMines Computer
+    </div>
+    <input type="button" value="Append Data in Div" id="divAppend" />
+    <input type="button" value="Preppend Data in Div" id="divPreppend" />
+
+    <input type="button" value="After Data in Div" id="divAfter" />
+    <input type="button" value="Before Data in Div" id="divBefore" />
+</body>
+<script>
+    $(document).ready(function(){
+        $("#divAppend").click(function() {
+            $("#content").append("<br/>This is JQuery Tutorial")
+        })
+
+        $("#divPreppend").click(function() {
+            $("#content").prepend("This is JQuery Tutorial<br/>")
+        })
+
+        $("#divAfter").click(function() {
+            $("#content").after("<br/>This is JQuery Tutorial")
+        })
+
+        $("#divBefore").click(function() {
+            $("#content").before("This is JQuery Tutorial<br/>")
+        })
+    })
+</script>
+
+</html>
