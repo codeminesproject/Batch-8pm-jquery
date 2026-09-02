@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JQuery Dropdown
+    </title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+        displayContinent();
+
+        $("#ddlContinent").change(function () {
+            $("#ddlCountry").empty()
+            var selectedContinent = $("#ddlContinent").val()
+            if (selectedContinent == "asia") {
+                $("#ddlCountry").append("<option value=''>--Select Country--</option>")
+                $("#ddlCountry").append("<option value='india'>India</option>")
+                $("#ddlCountry").append("<option value='china'>China</option>")
+            } else if (selectedContinent == "north america") {
+                $("#ddlCountry").append("<option value=''>--Select Country--</option>")
+                $("#ddlCountry").append("<option value='usa'>USA</option>")
+                $("#ddlCountry").append("<option value='canada'>Canada</option>")
+            } else if (selectedContinent == "south america") {
+                $("#ddlCountry").append("<option value=''>--Select Country--</option>")
+                $("#ddlCountry").append("<option value='brazil'>Brazil</option>")
+                $("#ddlCountry").append("<option value='columbia'>Columbia</option>")
+            }
+        })
+    })
+
+    function displayContinent() {
+        $("#ddlContinent").append("<option value=''>--Select Continent--</option>")
+        $("#ddlContinent").append("<option value='asia'>Asia</option>")
+        $("#ddlContinent").append("<option value='north america'>North America</option>")
+        $("#ddlContinent").append("<option value='south america'>South America</option>")
+        $("#ddlContinent").append("<option value='antartica'>Antartica</option>")
+        $("#ddlContinent").append("<option value='australia'>Australia</option>")
+        $("#ddlContinent").append("<option value='europe'>Europe</option>")
+        $("#ddlContinent").append("<option value='africa'>Africa</option>")
+    }
+</script>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                Continent
+            </td>
+            <td>
+                <select id="ddlContinent">
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Country
+            </td>
+            <td>
+                <select id="ddlCountry">
+                </select>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

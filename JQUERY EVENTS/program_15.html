@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>DOM Manupulation</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        
+
+        .content-p {
+            background-color: red;
+            font-size: 30px;
+            width: 300px;
+            height: 200px;
+        }
+
+        .div-hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content" class="content-p">
+        
+    </div>
+
+    <input type="button" value="Hide/Show Div" id="divHideShow" />
+</body>
+<script>
+    $(document).ready(function(){
+        
+
+        $("#divHideShow").click(function(){
+            $("#content").slideToggle(2000)
+        })
+    })
+</script>
+
+</html>
